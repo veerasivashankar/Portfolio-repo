@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Veera Shiva Shankar - Anime Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 class="top-heading">Developer Portfolio</h1>
+
+  <div class="logo">
+    <img src="https://i.postimg.cc/Pr5T9JBM/Chat-GPT-Image-Jun-21-2025-11-17-11-PM.png" alt="Logo" onclick="document.getElementById('morePage').style.display = 'none'">
+  </div>
+
+  <a class="download-btn" href="https://drive.google.com/file/d/10hkBT3OPZ-qi-O7DmsEyWffhxwhSyvxg/view?usp=drive_link" download>⬇️ Download Resume</a>
+
+  <div class="center-container">
+    <img src="https://i.postimg.cc/GtNTK2Qb/ai-pic.png" alt="Anime Boy">
+    <h2>Veera Shiva Shankar</h2>
+  </div>
+
+  <div class="section section1" onclick="showDetail('about')"><span style="font-size: 30px;">👨🏼‍💻</span> About</div>
+  <div class="section section2" onclick="showDetail('skills')"><span style="font-size: 30px;">🛠️</span> Skills</div>
+  <div class="section section3" onclick="showDetail('projects')"><span style="font-size: 30px;">🧪</span> Projects</div>
+  <div class="section section4" onclick="showDetail('education')"><span style="font-size: 30px;">🎓</span> Education</div>
+  <div class="section section5" onclick="showDetail('achievements')"><span style="font-size: 30px;">🏆</span> Achievements</div>
+  <div class="section section6" onclick="showDetail('contact')"><span style="font-size: 30px;">📬</span> Contact</div>
+
+  <div class="more-section" onclick="document.getElementById('morePage').style.display = 'block'">More...</div>
+
+  <div class="more-page" id="morePage">
+    <h2>More About Me</h2>
+    <div class="more-grid">
+      <div class="more-item" data-icon="💼"><strong>Experience</strong><br>Internships or roles will go here.</div>
+      <div class="more-item" data-icon="🗣️"><strong>Languages</strong><br>English, Telugu</div>
+      <div class="more-item" data-icon="🎮"><strong>Hobbies</strong><br>Web Design, Gaming, Reading, Gym</div>
+      <div class="more-item" data-icon="🚀"><strong>Future Projects</strong><br>Upcoming projects section</div>
+      <div class="more-item" data-icon="📜"><strong>Certifications</strong><br>More certifications listed here</div>
+      <div class="more-item" data-icon="🧠"><strong>Workshops</strong><br>UI/UX, Web, Tech talks</div>
+      <div class="more-item" data-icon="🎯"><strong>Goals</strong><br>Future roadmap and aspirations</div>
+      <div class="more-item" data-icon="🌐"><strong>Community</strong><br>Hackathons, Open Source</div>
+    </div>
+    <div class="back-button" onclick="document.getElementById('morePage').style.display = 'none'">← Back</div>
+  </div>
+
+  <div id="detailPanel">
+    <h3 id="detailTitle">Section</h3>
+    <p id="detailContent">Click a section to view details</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
