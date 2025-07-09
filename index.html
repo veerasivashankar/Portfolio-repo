@@ -1,55 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Veera Shiva Shankar - Anime Resume</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siva | Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1 class="top-heading">Developer Portfolio</h1>
+  <header>
+    <nav class="glass-navbar">
+      <a href="#" class="logo" title="Siva">
+        <img src="https://i.postimg.cc/Pr5T9JBM/Chat-GPT-Image-Jun-21-2025-11-17-11-PM.png" alt="Siva Logo">
+      <a class="hidding">Siva.dev</a>
+      </a>
+      <div class="nav-toggle" id="navToggle">&#9776;</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-btn">About</a></li>
+        <li><a href="#education" class="nav-btn">Education</a></li>
+        <li><a href="#experience" class="nav-btn">Experience</a></li>
+        <li><a href="#certifications" class="nav-btn">Certifications</a></li>
+        <li><a href="#projects" class="nav-btn">Projects</a></li>
+        <li><a href="#contact" class="nav-btn">Contact</a></li>
+        <li><a href="#feedback-section" class="nav-btn">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="logo">
-    <img src="https://i.postimg.cc/Pr5T9JBM/Chat-GPT-Image-Jun-21-2025-11-17-11-PM.png" alt="Logo" onclick="document.getElementById('morePage').style.display = 'none'">
-  </div>
+  <main>
+    <section id="hero">
+      <div class="hero-content glass">
+        <h1>Hello, I'm <span class="choco-text">Veer Siva Shankar</span></h1>
+        <p>Web Developer | Problem Solver | UI/UX Enthusiast</p>
+        <button class="choco-btn ripple" id="hireBtn">Hire Me</button>
+      </div>
+      <div class="hero-img">
+        <img src="https://i.postimg.cc/GtNTK2Qb/ai-pic.png" alt="Siva Profile">
+      </div>
+    </section>
 
-  <a class="download-btn" href="https://drive.google.com/file/d/10hkBT3OPZ-qi-O7DmsEyWffhxwhSyvxg/view?usp=drive_link" download>⬇️ Download Resume</a>
+    <svg class="wave" viewBox="0 0 1440 100"><path fill="#fff" fill-opacity="1" d="M0,64L1440,0L1440,320L0,320Z"></path></svg>
 
-  <div class="center-container">
-    <img src="https://i.postimg.cc/GtNTK2Qb/ai-pic.png" alt="Anime Boy">
-    <h2>Veera Shiva Shankar</h2>
-  </div>
-
-  <div class="section section1" onclick="showDetail('about')"><span style="font-size: 30px;">👨🏼‍💻</span> About</div>
-  <div class="section section2" onclick="showDetail('skills')"><span style="font-size: 30px;">🛠️</span> Skills</div>
-  <div class="section section3" onclick="showDetail('projects')"><span style="font-size: 30px;">🧪</span> Projects</div>
-  <div class="section section4" onclick="showDetail('education')"><span style="font-size: 30px;">🎓</span> Education</div>
-  <div class="section section5" onclick="showDetail('achievements')"><span style="font-size: 30px;">🏆</span> Achievements</div>
-  <div class="section section6" onclick="showDetail('contact')"><span style="font-size: 30px;">📬</span> Contact</div>
-
-  <div class="more-section" onclick="document.getElementById('morePage').style.display = 'block'">More...</div>
-
-  <div class="more-page" id="morePage">
-    <h2>More About Me</h2>
-    <div class="more-grid">
-      <div class="more-item" data-icon="💼"><strong>Experience</strong><br>Internships or roles will go here.</div>
-      <div class="more-item" data-icon="🗣️"><strong>Languages</strong><br>English, Telugu</div>
-      <div class="more-item" data-icon="🎮"><strong>Hobbies</strong><br>Web Design, Gaming, Reading, Gym</div>
-      <div class="more-item" data-icon="🚀"><strong>Future Projects</strong><br>Upcoming projects section</div>
-      <div class="more-item" data-icon="📜"><strong>Certifications</strong><br>More certifications listed here</div>
-      <div class="more-item" data-icon="🧠"><strong>Workshops</strong><br>UI/UX, Web, Tech talks</div>
-      <div class="more-item" data-icon="🎯"><strong>Goals</strong><br>Future roadmap and aspirations</div>
-      <div class="more-item" data-icon="🌐"><strong>Community</strong><br>Hackathons, Open Source</div>
+    <section id="about" class="glass">
+      <h2>About Me</h2>
+      <p>
+        Throughout my academic journey and early career, I have achieved several milestones that reflect my dedication to learning and growing as a developer and problem solver. I have completed internships at CodeAlpha and Stacktech, gaining real-world experience in building modern and efficient websites. I have earned certifications in Python, C, static web development, responsive design, and dynamic web development, which strengthened my technical foundation. I also completed a UI/UX design workshop and received a certificate in data science and analytics from HP Life and another in coding and development from Deloitte. I have worked on projects such as a Cloud Kitchen Management System and a queue-based data structure project, which combined my skills in both computer science and business thinking. These achievements demonstrate my passion for technology, creativity, and continuous improvement.
+      </p>
+      <div class="about-details">
+        <div>
+          <strong>Location:</strong> Anantapur, Andhra Pradesh, India
+        </div>
+        <div>
+          <strong>Email:</strong> <a href="mailto:balaipalliveera@gmail.com" class="white-link">balaipalliveera@gmail.com</a>
+        </div>
+       
+      </div>
+    </section>
+<section id="experience" class="glass">
+  <h2>Experience</h2>
+  <div class="experience-list">
+    <div class="experience-item">
+      <h3>Web Developer Intern <span class="company">@ CodeAlpha</span></h3>
+      <p>
+        <strong>CodeAlpha</strong> is a technology-driven company that offers internship opportunities to help students gain practical skills in software development and web technologies.
+      </p>
+      <ul>
+        <li>Designed and developed responsive websites using HTML, CSS, and JavaScript.</li>
+        <li>Gained hands-on experience in static and dynamic web development.</li>
+        <li>Improved problem-solving skills by working on real-world projects in a collaborative environment.</li>
+      </ul>
     </div>
-    <div class="back-button" onclick="document.getElementById('morePage').style.display = 'none'">← Back</div>
+    <div class="experience-item">
+      <h3>Web Developer Intern <span class="company">@ Stacktech</span></h3>
+      <p>
+        <strong>Staxtech</strong> is a software development company that focuses on creating scalable and modern digital solutions for clients across various industries.
+      </p>
+      <ul>
+        <li>Contributed to both frontend and backend of web applications.</li>
+        <li>Built clean user interfaces and enhanced user experience with responsive design techniques.</li>
+        <li>Collaborated with developers and designers to meet project requirements and deadlines.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+    <section id="certifications" class="glass">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Build Your Own Static Website (Nxt WAVE)</li>
+        <li>Build Your Own Responsive Website (Nxt WAVE)</li>
+        <li>Build Your Own Dynamic Website (Nxt WAVE)</li>
+        <li>Python (Nxt WAVE)</li>
+        <li>UI/UX Design Workshop (Nxt WAVE)</li>
+        <li>Data Science and Analytics (HP Life Company)</li>
+        <li>Coding and Development (Deloitte Company)</li>
+      </ul>
+    </section>
+
+    <svg class="wave flip" viewBox="0 0 1440 100"><path fill="#fff" fill-opacity="1" d="M0,64L1440,0L1440,320L0,320Z"></path></svg>
+
+    <section id="projects">
+  <h2>My Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card glass">
+      <div class="card-header">
+        <span class="emoji">📖</span>
+        <h3>Wikipedia</h3>
+      </div>
+      <p>A simple Wikipedia search and summary web app.</p>
+      <a href="#" class="choco-btn ripple" target="_blank">View Project</a>
+    </div>
+    <div class="project-card glass">
+      <div class="card-header">
+        <span class="emoji">🎵</span>
+        <h3>Music Player</h3>
+      </div>
+      <p>Modern music player with playlist and waveform visualization.</p>
+      <a href="#" class="choco-btn ripple" target="_blank">View Project</a>
+    </div>
+    <div class="project-card glass">
+      <div class="card-header">
+        <span class="emoji">💱</span>
+        <h3>Currency Converter</h3>
+      </div>
+      <p>Real-time currency converter with multiple currency support.</p>
+      <a href="#" class="choco-btn ripple" target="_blank">View Project</a>
+    </div>
+    <div class="project-card glass">
+      <div class="card-header">
+        <span class="emoji">⏱️</span>
+        <h3>Stopwatch</h3>
+      </div>
+      <p>Simple and accurate stopwatch for tracking time.</p>
+      <a href="#" class="choco-btn ripple" target="_blank">View Project</a>
+    </div>
+    <div class="project-card glass">
+      <div class="card-header">
+        <span class="emoji">🌦️</span>
+        <h3>Weather App</h3>
+      </div>
+      <p>Weather forecast app with live data and location support.</p>
+      <a href="#" class="choco-btn ripple" target="_blank">View Project</a>
+    </div>
+    <div class="project-card glass">
+      <div class="card-header">
+        <span class="emoji">🖼️</span>
+        <h3>Gallery</h3>
+      </div>
+      <p>Responsive image gallery with lightbox and filters.</p>
+      <a href="#" class="choco-btn ripple" target="_blank">View Project</a>
+    </div>
+    <div class="project-card glass">
+      <div class="card-header">
+        <span class="emoji">🧮</span>
+        <h3>Calculator</h3>
+      </div>
+      <p>Basic and scientific calculator with history.</p>
+      <a href="#" class="choco-btn ripple" target="_blank">View Project</a>
+    </div>
+    <div class="project-card glass">
+      <div class="card-header">
+        <span class="emoji">📝</span>
+        <h3>Todo-list</h3>
+      </div>
+      <p>Task manager app for organizing your daily todos.</p>
+      <a href="#" class="choco-btn ripple" target="_blank">View Project</a>
+    </div>
+    <div class="project-card glass">
+      <div class="card-header">
+        <span class="emoji">🌍</span>
+        <h3>Country Population</h3>
+      </div>
+      <p>Displays population data for countries around the world.</p>
+      <a href="#" class="choco-btn ripple" target="_blank">View Project</a>
+    </div>
+  </div>
+</section>
+
+
+    <section id="contact" class="glass">
+      <h2>Contact</h2>
+      <form id="contactForm" action="mailto:balaipalliveera@gmail.com" method="POST" enctype="text/plain">
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
+        <textarea name="Message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="choco-btn ripple">Send</button>
+      </form>
+      <div id="formMsg"></div>
+      <div class="contact-details">
+        <p><strong>Email:</strong> <a href="mailto:balaipalliveera@gmail.com" class="white-link" >balaipalliveera@gmail.com</a></p>
+        <p><strong>Phone:</strong> +91 9701727175</p>
+        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/veera-siva-shankar-balayapalli-a80080285" target="_blank" class="white-link">Profile</a></p>
+      </div>
+    </section>
+
+    <section id="socials" class="glass socials-section">
+      <h2>Connect with Me</h2>
+      <div class="socials-bottom">
+        <a href="https://github.com/veerasivashankar" class="social-icon" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/veera-siva-shankar-balayapalli-a80080285" class="social-icon" target="_blank" title="LinkedIn" ><i class="fab fa-linkedin"></i></a>
+        <a href="https://x.com/balaipalli64443?t=HtZn3eH81SGpoUkG2o-srA&s=09" class="social-icon" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+    </section>
+    <section id="feedback-section" class="glass feedback-section">
+  <h2>Feedback</h2>
+  <form id="feedbackForm">
+    <div class="star-rating">
+      <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5 stars">&#9733;</label>
+      <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars">&#9733;</label>
+      <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars">&#9733;</label>
+      <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars">&#9733;</label>
+      <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star">&#9733;</label>
+    </div>
+    <textarea name="feedback" placeholder="Your feedback..." required></textarea>
+    <button type="submit" class="choco-btn ripple">Submit Feedback</button>
+    <div id="feedbackMsg"></div>
+  </form>
+  <div id="feedback-list-container">
+    <h3>Recent Feedback</h3>
+    <div id="feedback-list"></div>
+  </div>
+</section>
+
+  </main>
+
+  <div class="chat-widget" id="chatWidget">
+    <button id="chatToggle" class="choco-btn">💬</button>
+    <div class="chat-box" id="chatBox">
+      <p><strong>Need Help?</strong></p>
+      <p>Ask me anything!</p>
+      <input type="text" placeholder="Type here...">
+    </div>
   </div>
 
-  <div id="detailPanel">
-    <h3 id="detailTitle">Section</h3>
-    <p id="detailContent">Click a section to view details</p>
-  </div>
-
+  <footer>
+    &copy; 2025 Siva 
+  </footer>
+  <script src="https://kit.fontawesome.com/4b8e0e4e8c.js" crossorigin="anonymous"></script>
   <script src="script.js"></script>
 </body>
 </html>
