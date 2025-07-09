@@ -1,38 +1,118 @@
-const details = {
-  about: {
-    title: "👨🏼‍💻 About Me",
-    content: `🔹 Name: Veera Shiva Shankar\n🔹 I'm a 3rd-year student in VIT-AP\n🔹 I love creativity and full stack development\n🔹 Passionate about coding and problem solving\n🔹 Location: Anantapur, Andhra Pradesh, India`
-  },
-  skills: {
-    title: "🛠️ Skills",
-    content: `🔹 HTML\n🔹 CSS\n🔹 JavaScript\n🔹 Python\n🔹 C Language\n🔹 Bootstrap\n🔹 Debugging\n🔹 Advanced MS Office\n🔹 Communication Skills`
-  },
-  projects: {
-    title: "🧪 Projects",
-    content: `🔹 Achieving Tasks Website\n🔹 Wikipedia Search Website`
-  },
-  education: {
-    title: "🎓 Education",
-    content: `🔹 B.Tech in CSE, VIT-AP University (2021–2025) – 80%\n🔹 Intermediate, Narayana Jr. College (2021–2023) – 91%\n🔹 10th, Sri Chaitanya School (2020) – 100%`
-  },
-  achievements: {
-    title: "🏆 Achievements",
-    content: `🔹 Certified in Static Website Building\n🔹 Certified in Responsive Website\n🔹 Certified in Dynamic Website\n🔹 Certified in Python & C\n🔹 Certified in MS Office\n🔹 UI/UX Mega Workshop Award`
-  },
-  contact: {
-    title: "📬 Contact",
-    content: `🔹 <a href="mailto:balaipalliveera@gmail.com">Email: balaipalliveera@gmail.com</a>\n🔹 Phone: <a href="https://wa.me/919701727175" target="_blank">9701727175 (WhatsApp)</a>\n🔹 GitHub: <a href="https://github.com/veerasivashankar" target="_blank">github.com/veerasivashankar</a>\n🔹 LinkedIn: <a href="https://www.linkedin.com/in/veera-siva-shankar-balayapalli-a80080285" target="_blank">LinkedIn Profile</a>\n🔹 Twitter: <a href="https://x.com/balaipalli64443" target="_blank">@balaipalli64443</a>`
-  }
-};
+document.querySelectorAll('.ripple').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    const circle = document.createElement('span');
+    circle.className = 'ripple-effect';
+    const rect = btn.getBoundingClientRect();
+    circle.style.left = `${e.clientX - rect.left}px`;
+    circle.style.top = `${e.clientY - rect.top}px`;
+    btn.appendChild(circle);
+    setTimeout(() => circle.remove(), 600);
+  });
+});
 
-function showDetail(section) {
-  document.getElementById("detailTitle").innerText = details[section].title;
-  document.getElementById("detailContent").innerHTML = details[section].content;
-  document.getElementById("detailPanel").style.display = "block";
+const feedbackForm = document.getElementById('feedbackForm');
+const feedbackMsg = document.getElementById('feedbackMsg');
+const feedbackList = document.getElementById('feedback-list');
+
+const FEEDBACK_KEY = 'portfolio_feedbacks';
+
+function loadFeedbacks() {
+  feedbackList.innerHTML = '';
+  const stored = localStorage.getItem(FEEDBACK_KEY);
+  if (stored) {
+    const feedbacks = JSON.parse(stored);
+    feedbacks.forEach(fb => {
+      const item = document.createElement('div');
+      item.className = 'feedback-item';
+      item.innerHTML = `
+        <div class="feedback-stars">${'&#9733;'.repeat(fb.rating)}<span style="color:#bbb;">${'&#9733;'.repeat(5-fb.rating)}</span></div>
+        <div class="feedback-comment">${fb.comment.replace(/</g, "&lt;")}</div>
+      `;
+      feedbackList.appendChild(item);
+    });
+  }
 }
 
-document.addEventListener("click", function (e) {
-  if (!e.target.closest(".section") && !e.target.closest("#detailPanel")) {
-    document.getElementById("detailPanel").style.display = "none";
+function saveFeedback(rating, comment) {
+  let feedbacks = [];
+  const stored = localStorage.getItem(FEEDBACK_KEY);
+  if (stored) {
+    feedbacks = JSON.parse(stored);
   }
+  feedbacks.push({ rating, comment });
+  localStorage.setItem(FEEDBACK_KEY, JSON.stringify(feedbacks));
+}
+feedbackMsg.textContent = "Thanks for your feedback!";
+feedbackMsg.style.color = "#fff";  
+setTimeout(() => { 
+  feedbackMsg.textContent = ""; 
+  feedbackMsg.style.color = "";   
+}, 2500);
+
+
+feedbackForm.onsubmit = function(e) {
+  e.preventDefault();
+  const rating = feedbackForm.rating.value;
+  const comment = feedbackForm.feedback.value.trim();
+  if (!rating || !comment) return;
+
+  saveFeedback(Number(rating), comment);
+  loadFeedbacks();
+
+  feedbackMsg.textContent = "Thanks for your feedback!";
+  feedbackForm.reset();
+  setTimeout(() => { feedbackMsg.textContent = ""; }, 2500);
+};
+
+window.addEventListener('DOMContentLoaded', loadFeedbacks);
+
+
+document.getElementById('hireBtn').onclick = function() {
+  document.getElementById('contact').scrollIntoView({behavior: 'smooth'});
+};
+
+const chatWidget = document.getElementById('chatWidget');
+const chatToggle = document.getElementById('chatToggle');
+chatToggle.onclick = () => {
+  chatWidget.classList.toggle('active');
+};
+
+const contactForm = document.getElementById('contactForm');
+const formMsg = document.getElementById('formMsg');
+if (contactForm) {
+  contactForm.onsubmit = e => {
+       formMsg.textContent = "Your email client should open now. Thank you!";
+    setTimeout(() => { formMsg.textContent = ""; }, 4000);
+  };
+}
+
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.onclick = () => {
+  navLinks.classList.toggle('open');
+};
+
+document.querySelectorAll('.nav-btn').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+  });
+});
+
+window.addEventListener('scroll', () => {
+  const sections = ['about', 'education', 'certifications', 'projects', 'contact'];
+  let scrollPos = window.scrollY + 80;
+  sections.forEach(id => {
+    const section = document.getElementById(id);
+    const link = document.querySelector(`.nav-btn[href="#${id}"]`);
+    if (section && link) {
+      if (
+        scrollPos >= section.offsetTop &&
+        scrollPos < section.offsetTop + section.offsetHeight
+      ) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    }
+  });
 });
